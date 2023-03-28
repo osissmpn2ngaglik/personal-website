@@ -1,0 +1,144 @@
+baseURL: "https://fzzzn.my.id/"
+languageCode: en-us
+title: fzzzn.
+paginate: 5
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: true
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+googleAnalytics: G-RH5XYPD4CB
+
+minify:
+  disableXML: true
+  #minifyOutput: true
+
+outputs:
+    home:
+     - HTML
+     - RSS
+     - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: fzzzn.
+  description: "fauzan's personal website."
+  keywords: [Blog, PaperMod]
+  author: fauzan
+  # author: ["Me", "You"] # multiple authors
+  images:
+    - og-image.png
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-i6x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png "
+    safari_pinned_tab: "/safari-pinned-tab.png"
+
+  label:
+    text: "fzzzn."
+    # icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true
+    title: fzzzn.
+    subtitle: "fauzan's personal website."
+    imageUrl: "/me.png"
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: image
+
+  # homeInfoParams:
+  #    Title: fzzzn.
+  #    Content: fauzan's personal website
+
+  socialIcons: 
+    - name: "twitter"
+      url: "https://twitter.com/eenthlh"
+    - name: "instagram"
+      url: "https://instagram.com/eenthlh"
+    - name: "github"
+      url: "https://github.com/fzzzn"
+
+  cover:
+    hidden: false # hide everywhere but not in structured data
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: home
+      name: home
+      url: /
+      weight: 10
+    - identifier: posts
+      name: posts
+      url: /posts/
+      weight: 20
+    - identifier: contact
+      name: contact
+      url: /contact/
+      weight: 30
+  footer:
+    - identifier: CC BY-NC-SA 4.0
+      name: CC BY-NC-SA 4.0
+      url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+      weight: 10
+    - identifier: status
+      name: status
+      url: https://status.zxn.my.id/
+      weight: 20
+    - identifier: archives
+      name: archives
+      url: /archives/
+      weight: 30
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    # codeFences: true
+    # guessSyntax: true
+    # lineNos: true
+    # style: monokai
